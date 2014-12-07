@@ -1,0 +1,6 @@
+Revision history for Pod-Weaver-Role-SectionCompletionSelf
+
+0.01    2014-12-07 (PERLANCAR) (unreleased)
+
+        - First release, refactor common text from
+          Pod-Weaver-Section-Completion-{GetoptLongComplete,PerinciCmdLine}.
