@@ -1,4 +1,4 @@
-package Pod::Weaver::Role::SectionCompletionSelf;
+package Pod::Weaver::Role::SectionText::SelfCompletion;
 
 # DATE
 # VERSION
@@ -7,13 +7,12 @@ use 5.010001;
 use Moose::Role;
 
 sub section_text {
-    my $self = shift;
-    my %args = @_;
+    my ($self, $vars) = @_;
 
     # put here to avoid confusing Pod::Weaver
     my $h2 = '=head2';
 
-    my $command_name = $args{command_name};
+    my $command_name = $vars->{command_name} // 'SET_ME';
 
     my $func_name = $command_name;
     $func_name =~ s/[^A-Za-z0-9]+/_/g;
@@ -83,7 +82,7 @@ no Moose::Role;
 
 =head1 DESCRIPTION
 
-This role provides section for "COMPLETION" POD section. The section describes
+This role provides text for "COMPLETION" POD section. The text describes
 instructions for activating tab completion for script, for several shells. It is
 meant for script that can complete itself (detecting environment variables like
 C<COMP_LINE> and C<COMP_POINT> and act accordingly).
@@ -95,5 +94,12 @@ L<Pod::Weaver::Section::Completion::PerinciCmdLine>.
 
 =head1 METHODS
 
-=head2 $obj->section_text(%args) => str
+=head2 $obj->section_text(\%vars) => str
 
+Variables:
+
+=over
+
+=item * command_name => str
+
+=back
