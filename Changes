@@ -1,5 +1,11 @@
 Revision history for Pod-Weaver-Role-SectionText-SelfCompletion
 
+0.02    2014-12-13 (PERLANCAR)
+
+	- Update (simplify) instruction to activate tab completion (mention
+	  shcompgen).
+
+
 0.01    2014-12-07 (PERLANCAR)
 
         - First release, refactor common text from
