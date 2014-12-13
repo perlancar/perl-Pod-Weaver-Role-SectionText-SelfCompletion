@@ -32,23 +32,12 @@ in your bash startup (e.g. C<~/.bashrc>). Your next shell session will then
 recognize tab completion for the command. Or, you can also directly execute the
 line above in your shell to activate immediately.
 
-You can also install L<App::BashCompletionProg> which makes it easy to add
-completion for Getopt::Long::Complete-based scripts. After you install the
-module and put C<. ~/.bash-complete-prog> (or C<. /etc/bash-complete-prog>), you
-can just run C<bash-completion-prog> and the C<complete> command will be added
-to your C<~/.bash-completion-prog>. Your next shell session will then recognize
-tab completion for the command.
-
-$h2 fish
-
-To activate fish completion for this script, execute:
-
- begin; set -lx COMP_SHELL fish; set -lx COMP_MODE gen_command; $command_name; end > \$HOME/.config/fish/completions/$command_name.fish
-
-Or if you want to install globally, you can instead write the generated script
-to C</etc/fish/completions/$command_name.fish> or
-C</usr/share/fish/completions/$command_name.fish>. The exact path might be
-different on your system. Please check your C<fish_complete_path> variable.
+It is recommended, however, that you install L<shcompgen> which allows you to
+activate completion scripts for several kinds of scripts on multiple shells.
+Some CPAN distributions (those that are built with
+L<Dist::Zilla::Plugin::GenShellCompletion>) will even automatically enable shell
+completion for their included scripts (using C<shcompgen>) at installation time,
+so you can immadiately have tab completion.
 
 $h2 tcsh
 
@@ -60,17 +49,11 @@ in your tcsh startup (e.g. C<~/.tcshrc>). Your next shell session will then
 recognize tab completion for the command. Or, you can also directly execute the
 line above in your shell to activate immediately.
 
-$h2 zsh
+It is also recommended to install C<shcompgen> (see above).
 
-To activate zsh completion for this script, put:
+$h2 other shells
 
- $func_name() { read -l; local cl="\$REPLY"; read -ln; local cp="\$REPLY"; reply=(`COMP_SHELL=zsh COMP_LINE="\$cl" COMP_POINT="\$cp" $command_name`) }
-
- compctl -K $func_name $command_name
-
-in your zsh startup (e.g. C<~/.zshrc>). Your next shell session will then
-recognize tab completion for the command. Or, you can also directly execute the
-line above in your shell to activate immediately.
+For fish and zsh, install C<shcompgen> as described above.
 
 _
     return $text;
