@@ -86,3 +86,8 @@ Variables:
 =item * command_name => str
 
 =back
+
+
+=head1 SEE ALSO
+
+L<Pod::Weaver::Role::SectionText::HasCompletion>
