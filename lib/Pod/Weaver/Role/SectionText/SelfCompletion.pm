@@ -6,7 +6,7 @@ package Pod::Weaver::Role::SectionText::SelfCompletion;
 use 5.010001;
 use Moose::Role;
 
-sub section_text {
+sub section_text_self_completion {
     my ($self, $vars) = @_;
 
     # put here to avoid confusing Pod::Weaver
