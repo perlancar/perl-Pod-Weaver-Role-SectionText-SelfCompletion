@@ -77,7 +77,7 @@ L<Pod::Weaver::Section::Completion::PerinciCmdLine>.
 
 =head1 METHODS
 
-=head2 $obj->section_text(\%vars) => str
+=head2 $obj->section_text_self_completion(\%vars) => str
 
 Variables:
 
