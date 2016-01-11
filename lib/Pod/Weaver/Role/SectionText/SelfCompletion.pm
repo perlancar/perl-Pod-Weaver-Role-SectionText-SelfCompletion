@@ -37,7 +37,7 @@ activate completion scripts for several kinds of scripts on multiple shells.
 Some CPAN distributions (those that are built with
 L<Dist::Zilla::Plugin::GenShellCompletion>) will even automatically enable shell
 completion for their included scripts (using C<shcompgen>) at installation time,
-so you can immadiately have tab completion.
+so you can immediately have tab completion.
 
 $h2 tcsh
 
