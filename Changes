@@ -1,5 +1,3 @@
-Revision history for Pod-Weaver-Role-SectionText-SelfCompletion
-
 0.04    2015-08-26 (PERLANCAR)
 
 	- [Incompatible change] Rename method section_text() ->
